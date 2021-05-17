@@ -1,4 +1,6 @@
+// Import node package 
 const http = require('http');
+// Import express 
 const app = require('./app');
 
 const normalizePort = val => {
@@ -35,6 +37,7 @@ const errorHandler = error => {
   }
 };
 
+// Creating server using express (app.js)
 const server = http.createServer(app);
 
 server.on('error', errorHandler);
