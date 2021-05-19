@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 // Convert the body to json object because we are receiving json from frontend
 app.use(bodyParser.json());
 
+// Set static folder and files
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/sauces', saucesRoute);
 app.use('/api/auth', userRoutes);

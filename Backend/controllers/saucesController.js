@@ -3,6 +3,7 @@ const fs = require('fs');
 
 exports.createSauce = (req, res, next) => {
   const data = JSON.parse(req.body.sauce)  //string format => converted to json
+  // Getting the host and using for images
   const url = req.protocol + '://' + req.get('host');
   const sauce = new Sauce({
     userId: data.userId,
